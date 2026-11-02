@@ -1,5 +1,3 @@
-<img src="assets/banner.svg" alt="10.2 Threat modeling: STRIDE-per-element engine" width="100%">
-
 [![tests](https://github.com/Icedmango83/exercises/actions/workflows/tests.yml/badge.svg)](https://github.com/Icedmango83/exercises/actions/workflows/tests.yml)
 ![area](https://img.shields.io/badge/area-10.2%20Threat%20modeling-4BDE81?labelColor=0b2216)
 ![python](https://img.shields.io/badge/python-3.12-4BDE81?labelColor=0b2216)
