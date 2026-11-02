@@ -1,0 +1,26 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install pytest
+      - name: Run the tests in every exercise folder
+        run: |
+          status=0
+          for dir in */; do
+            if ls "$dir"test_*.py >/dev/null 2>&1; then
+              echo "::group::$dir"
+              (cd "$dir" && python -m pytest -q) || status=1
+              echo "::endgroup::"
+            fi
+          done
+          exit $status

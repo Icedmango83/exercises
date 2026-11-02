@@ -1,0 +1,10 @@
+{"elements": [
+  {"id": "E1", "type": "external", "name": "Patient browser"},
+  {"id": "E2", "type": "external", "name": "Clinic SSO"},
+  {"id": "P1", "type": "process",  "name": "ClinicBook API"},
+  {"id": "D2", "type": "store",    "name": "Visit notes"},
+  {"id": "D3", "type": "store",    "name": "Audit log", "holds_logs": true},
+  {"id": "DF6", "type": "flow", "from": "P1", "to": "P2", "crosses_boundary": false},
+  {"id": "DF1", "type": "flow", "from": "E1", "to": "P1", "crosses_boundary": true},
+  {"id": "DF4", "type": "flow", "from": "P1", "to": "D2", "crosses_boundary": true}
+]}
